@@ -1,4 +1,4 @@
-function print (dog:{
+function printt (dog:{
     name:string,
     age:number,
     breed:string,
@@ -22,7 +22,7 @@ let dog = {
 //     weight:10
 // })
 
-print(dog)
+printt(dog)
 
 
 // index signatures
@@ -42,3 +42,40 @@ phones.home = {
 }
 
 console.log(phones.home)
+
+// Arrays
+
+let names : string[] = ["Babar Azam" , "Messi"] 
+
+// Objects in Arrays
+
+let persons =[
+    {
+        name: "Usman",
+        age: 20,
+        height: "6'"
+    }
+]
+// OR
+let pets : {name: string ,age:number ,breed: string}[] = []
+
+pets[0] = {
+    name:"luna",
+    age:2,
+    breed: "Havanese"
+}
+
+pets[1] = {
+    name:"sudo",
+    age:2,
+    breed: "german"
+}
+
+console.log(pets)
+
+// Tuples
+// restrictions are only on assignments, not on push or pop
+let things : [number , string ] =[34, "lamp"]
+
+
+
