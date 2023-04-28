@@ -11,3 +11,4 @@ function timeout(n: number) {
   (async () => {
     console.log(await addNumbers(3, 4))
   })()
+
