@@ -24,3 +24,4 @@ isJSON(class {})
 isJSON(new BigInt(143))
 // @ts-expect-error
 isJSON(isJSON)
+const num = 6;

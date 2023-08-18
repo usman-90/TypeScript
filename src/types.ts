@@ -1,11 +1,17 @@
 export type headTail = "head" | "tails";
 
+
+// You can create type aliases that combine existing types with new behavior by using Intersection (&) types.
+
+type SpecialDate = Date & { getReason(): string } //like this
+
 // Interface
 export interface person  {
     name: string,
     age: number
     eat(food: string):void
 }
+
 
 // extends Interface
 
@@ -30,4 +36,8 @@ export class professor implements person{
 // Recursive types
 
 export type nestedNumber = number | nestedNumber[];
+
+// Fucntion Types
+
+export type addTwoNumbers = (a:number , b: number) => number
 
