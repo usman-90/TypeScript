@@ -6,6 +6,7 @@ function headOrtail() : headTail {
     return "tails";
 }
 
+
 console.log(headOrtail())
 
 // Interfaces are used to represent object types specifically

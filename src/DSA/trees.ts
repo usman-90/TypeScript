@@ -28,6 +28,21 @@ const insert = <T>(node: treeNode<T>, x: T) => {
 		return;
 	}
 };
+
+
+const fintHeight = <T>(node: treeNode<T>): void => {
+	if (!node?.data) {
+		return
+	}
+	inOrderTraverse(node?.left);
+    console.log(node.left  , node.right)
+    if (!node.left && !node.right){
+        console.log(node?.data);
+    }
+	inOrderTraverse(node?.right);
+
+};
+
 const inOrderTraverse = <T>(node: treeNode<T>): void => {
 	if (!node?.data) {
 		return
@@ -95,6 +110,29 @@ const deleteNode = <T>(node: treeNode<T>, x: T): void => {
 //2 		4 		22 		27
 // 			20
 //   				21
+
+
+const BFS = <T>(tree : treeNode<T>) : void => {
+    if (!tree.data){
+        return
+    }
+    let q = [tree]
+    let counter = 0
+    while(q.length){
+        counter++
+        if (q[0].left){
+            q.push(q[0].left)
+        }
+        if (q[0].right){
+            q.push(q[0].right)
+        }
+        console.log(q[0].data)
+        q.shift()
+    }
+    console.log("Counter" , counter)
+}
+
+
 let node: treeNode<number> = {};
 insert(node, 10);
 insert(node, 5);
@@ -109,7 +147,11 @@ insert(node, 27);
 insert(node, 20);
 insert(node, 21)
 inOrderTraverse(node);
-console.log("After deletion!")
-deleteNode(node, 19)
-inOrderTraverse(node);
+console.log("--------")
+BFS(node)
+console.log("--------")
+fintHeight(node);
+//console.log("After deletion!")
+//deleteNode(node, 19)
+//inOrderTraverse(node);
 
